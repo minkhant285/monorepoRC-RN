@@ -7,40 +7,45 @@ export class Demo extends Component {
 
     constructor(props) {
         super(props)
-      
+
         this.state = {
-           data:'',
-           fatched:false
+            data: [{ name: '123' }],
+            fatched: false
         }
-      }
+    }
 
-    componentDidMount(){
+    componentDidMount() {
         this.getDataFromApi()
-      }
-    
+    }
 
-    getDataFromApi(){
+
+    getDataFromApi() {
         httpGet('connectionService/getConnections').then(
-          result =>
-          this.setState({
-            data:result,
-            fatched:true
-          })
-          )
-      }
+            (result) => {
+                if (result) {
+                    return this.setState({
+                        data: result,
+                        fatched: true
+                    });
+                }
+
+            },
+        )
+    }
 
     render() {
-        if(this.state.fatched){
+        if (this.state.fatched) {
             return (
                 <View>
                     <Text> Demo from Shared folder</Text>
                     <Text>Received Data: {this.state.data[0].name}</Text>
                 </View>
             )
-        }else{
+        } else {
             return (
                 <View>
                     <Text> Demo from Shared folder  </Text>
+                    <Text>Received Data: NO DATA(network error)</Text>
                 </View>
             )
         }
