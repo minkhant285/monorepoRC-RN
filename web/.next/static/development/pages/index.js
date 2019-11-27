@@ -71,6 +71,8 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       if (this.state.fatched) {
         return __jsx(react_native__WEBPACK_IMPORTED_MODULE_6__["View"], {
           __source: {
@@ -90,24 +92,34 @@ function (_Component) {
             lineNumber: 41
           },
           __self: this
-        }, "Received Data: ", this.state.data[0].name));
-      } else {
-        return __jsx(react_native__WEBPACK_IMPORTED_MODULE_6__["View"], {
+        }, "Received Data: ", this.state.data[0].name), __jsx(react_native__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+          title: "Click",
+          onPress: function onPress() {
+            return alert(_this3.props.name);
+          },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 46
+            lineNumber: 42
           },
           __self: this
-        }, __jsx(react_native__WEBPACK_IMPORTED_MODULE_6__["Text"], {
+        }));
+      } else {
+        return __jsx(react_native__WEBPACK_IMPORTED_MODULE_6__["View"], {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 47
           },
           __self: this
-        }, " Demo from Shared folder  "), __jsx(react_native__WEBPACK_IMPORTED_MODULE_6__["Text"], {
+        }, __jsx(react_native__WEBPACK_IMPORTED_MODULE_6__["Text"], {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 48
+          },
+          __self: this
+        }, " Demo from Shared folder  "), __jsx(react_native__WEBPACK_IMPORTED_MODULE_6__["Text"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49
           },
           __self: this
         }, "Received Data: NO DATA(network error)"));
@@ -43140,6 +43152,7 @@ function (_Component) {
         },
         __self: this
       }), __jsx(_shared_Demo__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        name: "mktk",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 36

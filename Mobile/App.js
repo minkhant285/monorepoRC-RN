@@ -23,7 +23,7 @@ class App extends Component {
 render(){
   return(
     <View>
-      <Demo/>
+      <Demo name="mktk"/>
     </View>
   )
 }

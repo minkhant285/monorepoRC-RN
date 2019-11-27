@@ -33,7 +33,7 @@ class Home extends Component {
       return (
         <div>
           <Nav/>
-          <Demo/>
+          <Demo name="mktk"/>
         </div>
       )
     }

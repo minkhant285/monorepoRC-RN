@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View,Button } from 'react-native'
 import { httpGet } from './http/httpHandler'
 
 
@@ -39,6 +39,7 @@ export class Demo extends Component {
                 <View>
                     <Text> Demo from Shared folder</Text>
                     <Text>Received Data: {this.state.data[0].name}</Text>
+                    <Button title="Click" onPress={() => alert(this.props.name)}/>
                 </View>
             )
         } else {
